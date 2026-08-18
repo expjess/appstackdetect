@@ -1,7 +1,7 @@
-# App Stack Detector
-
-> This is a copy of the project on August 18 and may not be kept updated. This README was written by
+> PLEASE NOTE: This is a copy of the project on August 18 and may not be kept updated. This README was written by
 > an AI agent and has not been reviewed by a human, so treat the descriptions here as unverified.
+
+# App Stack Detector
 
 Answers one question about a published mobile app: **is it React Native, and does it use Expo?**
 
