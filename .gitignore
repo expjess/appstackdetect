@@ -1,0 +1,20 @@
+# Secrets: the ipatool keyring passphrase. Never commit this.
+.ipatool-passphrase
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Runtime state
+.server.pid
+results/
+logs/
+
+# Vendored third-party binaries, fetched per machine (see README).
+bin/
+
+# Real app builds used by tests/test_fixtures.py. Too large for GitHub, and
+# they are other people's release builds (see README for the sources).
+fixtures/

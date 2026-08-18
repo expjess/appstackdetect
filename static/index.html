@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>App Stack Detector — React Native / Expo</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header>
+  <div class="wrap headbar">
+    <div class="headline">
+      <h1>App Stack Detector</h1>
+      <p class="sub">Paste a store link or drop an app file. It reads the shipped binary and reports whether the app is React Native, and whether it uses Expo.</p>
+    </div>
+    <aside class="team-note">
+      This tool is for the Expo team only! Not the Expo team? Ask <a href="https://tuft.dev">Tuft</a>
+      to build you one, in fewer text messages than it takes to nail down brunch plans with your friends.
+    </aside>
+  </div>
+</header>
+
+<main class="wrap">
+  <form id="lookup">
+    <input id="query" type="text" autocomplete="off" spellcheck="false"
+           placeholder="Enter a Play Store link, App Store link, com.package.name, or id123456789" />
+    <button type="submit" id="go">Analyze</button>
+  </form>
+
+  <div id="drop" class="drop">
+    <input type="file" id="file" accept=".apk,.aab,.xapk,.apks,.ipa,.tar.gz,.tgz,.zip" hidden />
+    <p><strong>or drop an app file here</strong> — .apk, .aab, .xapk, .apks, .ipa, or a simulator .app in a .tar.gz</p>
+    <p class="muted">An uploaded file is analyzed directly and deleted afterwards.</p>
+    <button type="button" id="pick">Choose a file</button>
+  </div>
+
+  <section id="ios-help">
+    <h2>Getting an iOS build</h2>
+    <div class="card">
+      <p id="ios-status" class="muted">Checking what this server can do…</p>
+      <h3>One command, from your Mac</h3>
+      <p class="muted">Downloads the app with your own Apple ID, uploads it here, prints the verdict and a link.</p>
+      <pre class="snippet" id="snippet-script"></pre>
+      <h3>Already have an .ipa?</h3>
+      <pre class="snippet" id="snippet-curl"></pre>
+    </div>
+  </section>
+
+  <section id="progress" hidden>
+    <h2>Working</h2>
+    <ol id="steps"></ol>
+  </section>
+
+  <section id="error" hidden class="error"></section>
+
+  <section id="result" hidden></section>
+</main>
+
+<footer class="wrap muted">
+  <p id="footnote"></p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
